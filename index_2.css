@@ -1,0 +1,45 @@
+@CHARSET "UTF-8";
+
+.frist_intro img{
+	width: 100%;
+  	float: left;
+}
+
+.left_lei{
+	width: 30%;
+	float: left;
+}
+
+.right_top{
+	width: 70%;
+	float:left;
+}
+
+.right_bot{
+	width: 70%;
+	float: right;
+	margin-bottom: 28px;
+}
+
+@media screen and (max-width: 800px) {
+	.left_lei{
+		display: none;
+	}
+
+	.right_top{
+		width: 100%;
+		float:none;
+		margin-top: -28px;
+	}
+	
+	.right_bot{
+		width: 100%;
+		float:none;
+		margin-bottom: 28px;
+	}
+}
+
+
+.amz-footer {
+	clear: both;
+}

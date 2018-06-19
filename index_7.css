@@ -1,0 +1,351 @@
+ @media only screen and (min-width :306px) {
+	html {
+	font-size:8px
+}
+}@media only screen and (min-width :323px) {
+	html {
+	font-size:10px
+}
+}@media only screen and (min-width :480px) {
+	html {
+	font-size:12px
+}
+}@media only screen and (min-width :768px) {
+	html {
+	font-size:15px
+}
+}
+ 
+ body {
+  margin: 0;
+}
+.top {
+  display: -moz-box;
+  display: -webkit-box;
+  display: box;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: #107e4e;
+  color: #fff;
+  filter: alpha(opacity=93);
+  -moz-opacity: .95;
+  opacity: .95;
+  z-index: 9999;
+  text-align: center;
+  margin-bottom: 3.2rem;
+  font-size: 1.2rem;
+}
+
+.location {
+  background-position: -4.6rem -1.7rem;
+  margin-left: .9rem;
+  line-height: 3rem;
+}
+
+.location .city-select {
+  margin-left: .1rem;
+  line-height: 3rem;
+}
+
+.pullDownBox {
+height: 2.2rem;
+  width: 1.8rem;
+  float: right;
+  margin: .25rem;
+  background: url(./pic/loc.png);
+  margin-top: 4px !important;
+  margin-left: 6px !important;
+}
+
+.allIcon {
+  /*background: url(/assets/mobile/images/techni/UI2.0-icons2.png);*/
+	background-size: 1.8rem;
+  margin: auto;
+}
+
+.call {
+	-webkit-box-flex: 1;
+  text-align: right;
+  line-height: 3rem;
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.callPhone {
+  float: right;
+  margin-right: 0.2rem;
+  width: 2.3rem;
+  margin-top: 0.3rem;
+  /*background: url(./pic/tel.png);
+  background-repeat: no-repeat;*/
+}
+.iconBox_common {
+  width: 2.8rem;
+  height: 3rem;
+}
+.logo-mi{
+	-webkit-box-flex: 5;
+}
+.logo-mi img {
+  height: 2.5rem;
+  padding-top: 0.3rem;
+}
+.Reserch {
+  /*line-height: 3rem;*/
+  text-align: center;
+  width: 100%;
+  background: #1C8457;
+  height: 3.6rem;
+  position: relative;
+  top: 2.00124988rem;
+  /*top: 0.60124988rem;*/
+  filter: alpha(opacity=93);
+  padding: 0 1rem;
+}
+
+.am-form-icon {
+  position: relative;
+}
+*, :after, :before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.FangDaJing {
+  position: absolute;
+  left: 0.8em;
+  top: 25%;
+  display: block;
+  margin-top: -.5em;
+  line-height: 1;
+  z-index: 0;
+  width: 2.8rem;
+  height: auto;
+}
+
+.FangDaJing:before {
+  display: inline-block;
+}
+.FangDaJing:before {
+  content: "";
+  /*background: url(./pic/resch.png);
+  width: 3rem;
+  height: 3rem;
+  background-repeat: no-repeat;*/
+}
+.am-form-icon .am-form-field.ayiRese {
+  padding-left: 3.5em!important;
+}
+.am-btn, button, img, input:not([type=radio]):not([type=checkbox]), select {
+  vertical-align: middle;
+}
+.am-round {
+  border-radius: 1000px !important;
+}
+
+#reser_Input{
+  display: block;
+  width: 100%;
+  padding: .5em; 
+  font: inherit;
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+ 
+  margin: 0;
+  padding-top: 0.6rem;
+  padding-bottom: 0.3rem;
+}
+
+.swiper-container {
+  top: 2rem;
+}
+
+.swiper-slide img {
+  width: 100%;
+}
+
+.zu_buttoms{
+  position: relative;
+  width: 100%;
+  padding: 1%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+li.heng_b {
+  width: 100%;
+}
+.zu_buttoms ul{
+	float: left;
+	width: 48%;
+	margin: 1%;
+	height: 8rem;
+  	border-radius: 1rem;
+  	background-color: #f9f9f9;
+  	padding-left: 1rem;
+}
+
+.gre_c_b{
+  	background-color: #e5fff3 !important;
+}
+
+.zu_buttoms ul img {
+  width: 6rem;
+  height: auto;
+  vertical-align: middle;
+  margin: 1rem .5rem 1rem 1rem;
+  float: left;
+}
+.zu_buttoms ul div {
+  float: left;
+  margin: 1.85rem .3rem;
+}
+
+.ng-binding{
+  font-size: 1.8rem;
+  color: #1fa86b;
+}
+.describe {
+  font-size: 1.1rem;
+  color: #000;
+}
+
+nav{
+  height: 4.8rem;
+  border-top: 1px rgba(31, 168, 107, 0.5) solid;
+  position: fixed;
+  bottom: 0;
+  background-color: #1fa86b;
+  font-size: .6rem;
+  width: 100%;
+  z-index: 999;
+}
+nav ul {
+  display: -moz-box;
+  display: -webkit-box;
+  display: box;
+  margin-top: .4rem;
+  padding-left: 0;
+}
+nav ul li .item {
+  margin: 0 auto;
+  width: 6.8rem;
+  height: 80%;
+  text-align: center;
+  /* padding-top: .1rem; */
+  padding-bottom: .1rem;
+}
+nav ul li{
+  box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  -webkit-box-pack: center;
+  box-pack: center;
+  width: 98%;
+  list-style-type: none;
+}
+
+.foot_b {
+  width: 2.8rem;
+  height: 2.8rem;
+  background-size: 2.8rem !important;
+  margin: auto;
+}
+.left_foot_b {
+  background: url(./pic/loc_bot.png);
+}
+.mid_foot_b {
+  background: url(./pic/point.png);
+}
+.right_foot_b {
+  background: url(./pic/tel_bot.png);
+}
+nav ul li .item span {
+  display: block;
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+a{
+  text-decoration: none;
+}
+
+.moduleTitle {
+    padding: 0rem 1rem 2rem 1rem;
+    border-bottom: 2px solid #93afa2;
+    margin: 0 1rem 0 1rem;
+}
+.moduleTitle p {
+    float: left;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    color: #1c8252;
+    margin: 0;
+    font-weight: bolder;
+}
+.moduleTitle p:nth-of-type(2) {
+    float: right;
+    font-size: 1rem;
+    color: #aeaeae;
+}
+.moduleTitle p span.cityName {
+    font-size: 1rem;
+    color: #aeaeae;
+}
+.moduleTitle p span {
+    font-style: normal;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffaf24;
+}
+
+.priceCust {
+    margin-bottom: 8rem;
+}
+
+.priceTxt {
+    padding: 0rem 0 3.6rem 0;
+}
+.priceTxt .price {
+    float: left;
+    width: 33%;
+}
+.priceTxt .price p {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    color: #aeaeae;
+    text-align: center;
+    margin-bottom: 0.8rem;
+}
+.priceTxt .price p span {
+    font-size: 1rem;
+}
+.priceTxt .price:nth-of-type(1) p:nth-of-type(2), .priceTxt .price:nth-of-type(2) p:nth-of-type(2) {
+    border-right: 1px solid #dfdfdf;
+}
+.priceTxt .price p:nth-of-type(2) {
+    font-size: 2.3rem;
+    color: #4bb15f;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    margin: 0;
+}
+
+.clearfix:after{
+	clear: both;
+}
+span#cnzz_stat_icon_1256287531 {
+    display: none;
+}

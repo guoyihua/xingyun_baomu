@@ -1,0 +1,312 @@
+@CHARSET "UTF-8";
+
+.Mid_all{
+	max-width: 939px;
+	padding: 33px;
+	margin: 0 auto;
+}
+
+.am-form-icon .am-form-field.ayiRese{
+	padding-left: 3.5em!important;
+}
+.ReDiv{
+	max-width: 680px;
+	margin: 0 auto;
+}
+.FangDaJing{
+	position: absolute;
+	left: 0.8em;
+	top: 25%;
+	display: block;
+	margin-top: -.5em;
+	line-height: 1;
+	z-index: 0;
+}
+.FangDaJing:before {
+  	content: "";
+ 	background: url(./pic/FangDaJin.png);
+ 	width: 35px;
+ 	height: 35px;
+ 
+}
+.FangDaJing:before {
+  display: inline-block;
+  /*
+  font: normal normal normal 1.6rem/1 FontAwesome,sans-serif;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);*/
+}
+
+.miayi-btn {
+  right: 0.5em;
+  left: auto;
+  
+  position: absolute;
+  top: 33%;
+  display: block;
+  margin-top: -.5em;
+  line-height: 1;
+  z-index: 2;
+  cursor:pointer;
+}
+
+.miayi-btn:before {
+  content: "觅阿姨";
+  font-size: 20px !important;
+  background-color: #20a86d;
+  color: white;
+  width: 78px;
+  height: 30px;
+  line-height: 30px !important;
+  border-radius: 1000px;
+  padding-left: 8px;
+  font-weight: bold;
+}
+.miayi-btn:before {
+  display: inline-block;
+  font: normal normal normal 1.6rem/1 FontAwesome,sans-serif;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+}
+
+.title_bts_del{
+	line-height: 30px;
+	padding: 10px 26px;
+	background-color: #bce8d5;
+	margin: 22px 0px !important;
+}
+
+.left_yxz{
+	font-size: 22px;
+	color: #055c37;
+}
+
+.div_allinline  
+{  
+	margin-bottom: 6px;
+ }  
+  
+.subdiv_allinline  
+{  
+    margin:0;  
+    padding:0;  
+    display:inline-block;  
+    _display:inline;  
+    *display:inline;  
+    zoom:1;  
+}  
+
+.deltt{
+    background: url(./pic/list-fliter.png) right no-repeat;
+    padding-right: 29px;
+    cursor: pointer;
+}
+.deltt{
+	display: inline-block;
+	border: 2px solid #055c37;
+	line-height: 29px;
+	padding-left: 5px;
+	font-size: 18px;
+}
+.title_bts_del a:visited,.TIaoJianTItile_all a:visited{
+	color:#055c37;
+	text-decoration: none;
+}
+.title_bts_del a:link,.TIaoJianTItile_all a:link{
+	color:#055c37;
+	text-decoration: none;
+}
+
+.title_bts_del a,.TIaoJianTItile_all a{
+    outline: none;
+    text-decoration: none;
+}
+
+.TIaoJianTItile_all{
+	border-radius: 60px;
+	border: 2px solid #055c37;
+	padding: 20px 35px;
+	font-size: 22px;
+  	/*font-weight: 600;*/
+}
+.tjleixin{
+	
+}
+.tjone{
+	
+}
+.TIaoJianTItile_all a{
+	padding-right: 8px;
+	padding-left: 8px;
+	text-align: center;
+}
+.select_a{
+	background-color: #20a86d;
+	color: white !important;
+	height: 30px;
+	line-height: 30px !important;
+	border-radius: 1000px;
+}
+.TIaoJianTItile_all:after{
+  content: "按条件觅阿姨";
+  font-size: 22px !important;
+  background-color: #20a86d;
+  color: white;
+  width: 180px;
+  height: 36px;
+  line-height: 31px !important;
+  border-radius: 1000px;
+  /* padding-left: 8px; */
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  /* margin: 0 auto; */
+  left: 43%;
+}
+.paixu_all{
+	background-color: #20a86d;
+	color: white;
+	font-size: 22px !important;
+	line-height: 30px;
+	padding: 10px 26px;
+	margin: 36px 0px !important;
+	border-radius: 30px;
+}
+.paixu_a {
+  color: white;
+  padding-right: 30px;
+}
+
+a.paixu_a:visited{
+	color:#FFFFFF;
+	text-decoration: none;
+}
+a.paixu_a:link{
+	color:#FFFFFF;
+	text-decoration: none;
+}
+a.paixu_a{
+    outline: none;
+    text-decoration: none;
+    padding-right: 25px;
+  	padding-left: 25px;
+}
+.select_a_pai {
+	color: #20a86d !important;
+  	background: white;
+  	text-align: center !important;
+	line-height: 30px !important;
+	border-radius: 1000px;
+}
+
+
+
+.One_ayi{
+  background-color: #dffbef;
+  padding: 20px 35px;
+  margin-bottom: 26px;
+}
+.one_a_con{
+	background-color:white;
+	height: 358px;
+	cursor: pointer;
+	position: relative;
+}
+.img_left{
+	width: 35%;
+	  align-content: center;
+	  text-align: center;
+	  margin: 5px 20px;
+}
+.img_left img{
+	/*width: 100%;*/
+	max-height: 348px;
+}
+.subdiv_allinline.right_con {
+  position: absolute;
+  margin-left: 20px;
+  width: 58%;
+}
+.ayi_name {
+  margin: 22px 0px;
+  font-size: 30px;
+  font-weight: 600;
+}
+.ayi_name:after{
+  content: "";
+  background: url(./pic/nv_ico.png);
+  width: 31px;
+  height: 35px;
+  position: absolute;
+  margin-left: 6px;
+  margin-top: 6px;
+}
+.con_a1,.con_a2{
+  color: #616d68;
+  font-size: 21px;
+  margin: 5px 0px;
+}
+
+p.jiagecankao {
+  color: black;
+  font-size: 25px;
+  margin-bottom: 16px;
+}
+
+p.jiagecankao span {
+  color: red;
+  font-weight: 600;
+}
+
+p.haopinglv {
+  font-size: 22px;
+    margin-top: 2px;
+}
+
+.NaiPingP {
+  position: relative;
+  margin-left: 32px;
+}
+.NaipingImg {
+	margin-right: 6px;
+}
+.ljyy_bt{
+	position: absolute;
+  /* float: right; */
+  bottom: 8px;
+  /* right: -37px; */
+  right: 5%;
+  cursor: pointer;
+}
+.am-pagination>.am-active>a, .am-pagination>.am-active>a:focus, .am-pagination>.am-active>a:hover, .am-pagination>.am-active>span, .am-pagination>.am-active>span:focus, .am-pagination>.am-active>span:hover {
+  background-color: #20ab70 !important;
+  border-color: #20ab70 !important;
+}
+
+.am-pagination a,.am-pagination span{
+	color: #20ab70;
+}
+a.subdiv_allinline.deltt {
+  margin-right: 8px;
+}
+spanp {
+  font-size: 18px;
+}
+
+[class*=am-icon-]:before {
+	font: normal normal normal 1.6rem/1.5 FontAwesome,sans-serif;
+	font-size: inherit;
+}
+li.amz-cse {
+  height: 50px;
+}
