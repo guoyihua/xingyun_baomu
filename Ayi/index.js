@@ -35,6 +35,7 @@
 	
 	$(".xmay input").click(function(){   
 		$("#iden").html("您的身份选择为 <b>雇主</b>，提交之后无法修改");
+		$('#my-alert').modal('open');
     	check_xmWho(1);
     	
 		$("#gzInfo").show();
@@ -42,6 +43,7 @@
     });
     $(".xmgz input").click(function(){  
     	$("#iden").html("您的身份选择为 <b>阿姨</b>，提交之后无法修改");
+    	$('#my-alert').modal('open');
     	check_xmWho(2);
     	
 		$("#gzInfo").hide();
@@ -53,7 +55,7 @@
     var xmWho_int = 0;					//当等于1的时候 是寻觅阿姨 如果等于2 就是寻觅工作
     check_xmWho(1);
     function check_xmWho(who_int){
-    	$('#my-alert').modal('open');
+//    	$('#my-alert').modal('open');
     	if(who_int==1){
     		$(".xmgz input").removeAttr("checked");
     		$(".xmay input").prop("checked",function(){
