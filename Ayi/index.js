@@ -76,14 +76,14 @@
 	
 	
 		"use strict";
-		var dappAddress = "n1t9NuEjgbw8ppNewjN42DaH9zWNuviKKRb";
+		var dappAddress = "n1uqCx3EjXfkfqEepAATsP11qj1j46H74kF";
 
 		
 		var nebulas = require("nebulas"),
 		Account = nebulas.Account,
 		neb = new nebulas.Neb();
-		neb.setRequest(new nebulas.HttpRequest("https://testnet.nebulas.io"));
-		//neb.setRequest(new nebulas.HttpRequest("https://mainnet.nebulas.io"));
+		//neb.setRequest(new nebulas.HttpRequest("https://testnet.nebulas.io"));
+		neb.setRequest(new nebulas.HttpRequest("https://mainnet.nebulas.io"));
 		//neb.setRequest(new nebulas.HttpRequest("http://localhost:8685"));
 		
 		var NebPay = require("nebpay");
@@ -108,6 +108,8 @@
 		   console.log("response of push:"+JSON.parse(resp.result));
 		   var re = JSON.parse(resp.result);
 		   if(re!=null &&re.length>0){
+			   	$("#none").html("已根据您的账户地址登陆！");
+				$('#alertNone').modal('open');
 				if(re[0].role==0){
 					$("#miayi").click();
 					$("#migongzuo").attr('disabled',true);
@@ -208,52 +210,75 @@
 				alert("Canceled uploading");
 		   }else{
 				//alert("success");
+			    $('#my-modal-loading').modal('open');
 				intervalQuery = setTimeout(function(){
+						$('#my-modal-loading').modal('close');
 						funcIntervalQuery();
 				},16000);
 		   } 
 		}
+		function cbPush1(resp){
+			   console.log("response of push:"+JSON.stringify(resp.result));
+			   
+			   if(typeof resp == 'string'){
+					console.log('reject');
+					alert("Canceled uploading");
+			   }else{
+					//alert("success");
+				    $('#my-modal-loading').modal('open');
+					intervalQuery = setTimeout(function(){
+						 $('#my-modal-loading').modal('close');
+							funcIntervalQuery1();
+					},16000);
+			   } 
+			}
 		function cbGetAyi(resp){
 		   console.log("response of push:"+JSON.stringify(resp.result));
-		   $('#my-modal-loading').modal('open');
-		   setTimeout(function(){
-			   $('#my-modal-loading').modal('close');
-		   },2000);
 		   
 		   if(typeof resp == 'string'){
 				console.log('reject');
 				alert("Canceled uploading");
 		   }else{
 				var result = JSON.parse(resp.result);
-				for(var i=0;i<result.length;i++){
-					 var imgurl='';
-						 if(result[i].sex=='0'){
-							imgurl = "小妖精.png";
-						 }else{
-							imgurl = "厨师.png";
-						 }
-						 $("#list").html("");
-						$("#list").append('<div class="swiper-slide">'+
-										'<ul><li>'+			            					              						              		
-											'<div class="ayi-box">'+
-										       '<h1>'+result[i].name+'</h1>'+
-								               '<a target="_blank">'+
-								               	'<img class="Thumbnail" src="'+imgurl+'">'+
-										       '</a>'+
-										       '<br/>'+
-										       '<a class ="con_ayi_a" target="_blank">'+transType(result[i].select_WebAyi)+'&nbsp;'+transJingyan(result[i].select_WebJingyan)+
-										       '</a>'+
-											   '<a class ="con_ayi_a" target="_blank">'+transXinzi(result[i].select_WebXinzi)+
-											   '</a>'+
-											   '<a class ="con_ayi_a" target="_blank">联系方式：'+result[i].phone+
-										       '</a>'+
-											   '<a class ="con_ayi_a" target="_blank">地址：'+result[i].adress+
-										       '</a>'+
-											'</div>'+
-										'</li>'+
-					              	'</ul>'+	             	
-						'</div>')
-					}
+				if(!result.length){
+					$("#none").html("没有匹配到合适的阿姨！");
+					$('#alertNone').modal('open');
+				}else{
+					$('#my-modal-loading').modal('open');
+					   setTimeout(function(){
+						   $('#my-modal-loading').modal('close');
+					   },2000);
+					   for(var i=0;i<result.length;i++){
+							 var imgurl='';
+								 if(result[i].sex=='0'){
+									imgurl = "小妖精.png";
+								 }else{
+									imgurl = "厨师.png";
+								 }
+								 $("#list").html("");
+								$("#list").append('<div class="swiper-slide">'+
+												'<ul><li>'+			            					              						              		
+													'<div class="ayi-box">'+
+												       '<h1>'+result[i].name+'</h1>'+
+										               '<a target="_blank">'+
+										               	'<img class="Thumbnail" src="'+imgurl+'">'+
+												       '</a>'+
+												       '<br/>'+
+												       '<a class ="con_ayi_a" target="_blank">'+transType(result[i].select_WebAyi)+'&nbsp;'+transJingyan(result[i].select_WebJingyan)+
+												       '</a>'+
+													   '<a class ="con_ayi_a" target="_blank">'+transXinzi(result[i].select_WebXinzi)+
+													   '</a>'+
+													   '<a class ="con_ayi_a" target="_blank">联系方式：'+result[i].phone+
+												       '</a>'+
+													   '<a class ="con_ayi_a" target="_blank">地址：'+result[i].adress+
+												       '</a>'+
+													'</div>'+
+												'</li>'+
+							              	'</ul>'+	             	
+								'</div>')
+							}
+				}
+				
 					var swiper = new Swiper('.swiper-container', {
 						nextButton: '.swiper-button-next',
 						prevButton: '.swiper-button-prev',
@@ -277,35 +302,45 @@
 				alert("Canceled uploading");
 		   }else{
 				var result = JSON.parse(resp.result);
-				for(var i=0;i<result.length;i++){
-					 var imgurl='';
-						 if(result[i].sex=='0'){
-							imgurl = "小妖精.png";
-						 }else{
-							imgurl = "厨师.png";
-						 }
-						 $("#list").html("");
-						$("#list").append('<div class="swiper-slide">'+
-										'<ul><li>'+			            					              						              		
-											'<div class="ayi-box">'+
-										       '<h1>'+result[i].name+'</h1>'+
-								               '<a target="_blank">'+
-								               	'<img class="Thumbnail" src="'+imgurl+'">'+
-										       '</a>'+
-										       '<br/>'+
-										       '<a class ="con_ayi_a" target="_blank">'+transType(result[i].select_WebAyi)+'&nbsp;'+transJingyan(result[i].select_WebJingyan)+
-										       '</a>'+
-											   '<a class ="con_ayi_a" target="_blank">'+transXinzi(result[i].select_WebXinzi)+
-											   '</a>'+
-											   '<a class ="con_ayi_a" target="_blank">联系方式：'+result[i].phone+
-										       '</a>'+
-											   '<a class ="con_ayi_a" target="_blank">地址：'+result[i].adress+
-										       '</a>'+
-											'</div>'+
-										'</li>'+
-					              	'</ul>'+	             	
-						'</div>')
-					}
+				if(!result.length){
+					$("#none").html("没有匹配到合适的雇主！");
+					$('#alertNone').modal('open');
+				}else{
+					$('#my-modal-loading').modal('open');
+					   setTimeout(function(){
+						   $('#my-modal-loading').modal('close');
+					   },2000);
+					for(var i=0;i<result.length;i++){
+						 var imgurl='';
+							 if(result[i].sex=='0'){
+								imgurl = "生意人.png";
+							 }else{
+								imgurl = "生意人.png";
+							 }
+							 $("#list").html("");
+							$("#list").append('<div class="swiper-slide">'+
+											'<ul><li>'+			            					              						              		
+												'<div class="ayi-box">'+
+											       '<h1>'+result[i].name+'</h1>'+
+									               '<a target="_blank">'+
+									               	'<img class="Thumbnail" src="'+imgurl+'">'+
+											       '</a>'+
+											       '<br/>'+
+											       '<a class ="con_ayi_a" target="_blank">'+transType(result[i].select_WebAyi)+'&nbsp;'+transJingyan(result[i].select_WebJingyan)+
+											       '</a>'+
+												   '<a class ="con_ayi_a" target="_blank">'+transXinzi(result[i].select_WebXinzi)+
+												   '</a>'+
+												   '<a class ="con_ayi_a" target="_blank">联系方式：'+result[i].phone+
+											       '</a>'+
+												   '<a class ="con_ayi_a" target="_blank">地址：'+result[i].adress+
+											       '</a>'+
+												'</div>'+
+											'</li>'+
+						              	'</ul>'+	             	
+							'</div>')
+						}
+				}
+				
 					var swiper = new Swiper('.swiper-container', {
 						nextButton: '.swiper-button-next',
 						prevButton: '.swiper-button-prev',
@@ -328,6 +363,7 @@
 			  .then(function(resp){
 				console.log("response:"+resp);
 				var respObject = JSON.parse(resp);
+				Pipei();
 				if(respObject.code ===0){
 					f=1;
 					alert("成功,即将为您匹配合适的人。。。");
@@ -381,7 +417,66 @@
 			}
 		  
 		}
-	
+		 function funcIntervalQuery1(){
+				if(f==0){
+					nebPay1.queryPayInfo(serialNumber)
+				  .then(function(resp){
+					console.log("response:"+resp);
+					var respObject = JSON.parse(resp);
+					Pipei1();
+					if(respObject.code ===0){
+						f=1;
+						alert("成功,即将为您匹配合适的人。。。");
+						var result = JSON.parse(respObject.data.execute_result);
+						 for(var i=0;i<result.length;i++){
+							 var imgurl='';
+							 if(result[i].sex=='0'){
+								imgurl = "小妖精.png";
+							 }else{
+								imgurl = "厨师.png";
+							 }
+							 $("#list").html("");
+							$("#list").append('<div class="swiper-slide">'+
+											'<ul><li>'+			            					              						              		
+												'<div class="ayi-box">'+
+											       '<h1>'+result[i].name+'</h1>'+
+									               '<a target="_blank">'+
+									               	'<img class="Thumbnail" src="'+imgurl+'">'+
+											       '</a>'+
+											       '<br/>'+
+											       '<a class ="con_ayi_a" target="_blank">'+transType(result[i].select_WebAyi)+'&nbsp;'+transJingyan(result[i].select_WebJingyan)+
+											       '</a>'+
+												   '<a class ="con_ayi_a" target="_blank">'+transXinzi(result[i].select_WebXinzi)+
+												   '</a>'+
+												   '<a class ="con_ayi_a" target="_blank">联系方式：'+result[i].phone+
+											       '</a>'+
+												   '<a class ="con_ayi_a" target="_blank">地址：'+result[i].adress+
+											       '</a>'+
+												'</div>'+
+											'</li>'+
+						              	'</ul>'+	             	
+							'</div>')
+						}
+						var swiper = new Swiper('.swiper-container', {
+							nextButton: '.swiper-button-next',
+							prevButton: '.swiper-button-prev',
+							paginationClickable: true,
+							spaceBetween: 30,
+							centeredSlides: true,
+							//autoplay: 5000,
+							autoplayDisableOnInteraction: false,
+							// Disable preloading of all images
+							preloadImages: false,
+							// Enable lazy loading
+							lazyLoading: true              
+						});
+					}
+				  }).catch(function(err){
+					console.log(err);
+				  });
+				}
+			  
+			}
 	
 	
 	function LiJiYuYue1(){
@@ -446,7 +541,7 @@
 		
 		
 		serialNumber = nebPay1.call(to, value, callFunction, callArgs, {
-			listener: cbPush
+			listener: cbPush1
 		});
 		
 	}
