@@ -76,6 +76,7 @@
 		"use strict";
 		var dappAddress = "n1t9NuEjgbw8ppNewjN42DaH9zWNuviKKRb";
 
+		
 		var nebulas = require("nebulas"),
 		Account = nebulas.Account,
 		neb = new nebulas.Neb();
