@@ -76,7 +76,7 @@
 	
 	
 		"use strict";
-		var dappAddress = "n1qaMyp3hNH78ye3AFcnHGt4UiuUWtmLmkp";
+		var dappAddress = "n1uurMLtULGcdaxdn6fGh24xbavRYWbwGEg";
 
 		
 		var nebulas = require("nebulas"),
